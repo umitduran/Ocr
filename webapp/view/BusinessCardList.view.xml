@@ -1,0 +1,19 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="incentergy.bccrm.BusinessCardCRM.controller.BusinessCardList">
+	<Page title="{i18n>BusinessCards}" showNavButton="{device>/system/phone}" navButtonPress="onNavButtonPress">
+		<List id="list" items="{/BusinessCards}" itemPress="onPressItem" growing="true" mode="MultiSelect">
+			<items>
+				<StandardListItem type="Active" title="{FirstName} {LastName}" description="{Position} {Organization}" icon="sap-icon://person-placeholder"/>
+			</items>
+		</List>
+		<footer>
+			<Toolbar>
+				<content>
+					<Button id="__button1" icon="sap-icon://delete" tooltip="{i18n>delete}" press="onPressDelete"/>
+					<Button id="WebRTCSendButton" visible="false" icon="sap-icon://enter-more" tooltip="{i18n>SendToOtherWebRTCClient}" press="onSendToOtherWebRTCClient" />
+					<ToolbarSpacer/>
+					<Button icon="sap-icon://camera" press="onAddBusinessCard"/>
+				</content>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>
